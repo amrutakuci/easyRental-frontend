@@ -11,7 +11,7 @@ import RegisterUserService from "../services/RegisterUserService";
 import { useNavigate } from 'react-router-dom';
 
 
-const USER_REST_API_URL = "http://localhost:8080"
+const USER_REST_API_URL = "http://169.234.8.65:8080"
 
 export default function Register() {
 
