@@ -12,8 +12,8 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import axios from "axios"
 import { myStorage } from "../App";
-
-const USER_REST_API_URL = "http://169.234.8.65:8080"
+import  {USER_REST_API_URL} from '../App'
+//const USER_REST_API_URL = "http://169.234.8.65:8080"
 
 
 export default function RegisterProduct() {

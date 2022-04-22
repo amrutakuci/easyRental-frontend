@@ -1,21 +1,27 @@
 import './App.css';
-import EasyRentalAppBar from './components/EasyRentalAppBar';
+
 import Login from './components/Login';
 import Register from './components/Register';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import RegisterConfirmation from './components/RegisterConfirmation';
 import UserHome from './components/UserHome';
 import RegisterProduct from './components/RegisterProduct';
 import BorrowProduct from './components/BorrowProduct';
 
-export const myStorage = window.localStorage;
 
+export const myStorage = window.localStorage;
+export const USER_REST_API_URL = "http://192.168.17.195:8080";
 function App() {
+  const pathname = window.location.pathname;
+  // console.log(pathname);
+  // console.log("%PUBLIC_URL%");
   return (
     <div className="App">
       <div>
+       
+        
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path={pathname} element={<Login />} />
           <Route path="/registerUser" element={<Register />} />
           <Route path="/registerConfirmation" element={<RegisterConfirmation />} />
           <Route path="/userHome" element={<UserHome />} />

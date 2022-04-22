@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import Container from '@mui/material/Container';
-import { Switch, TextField } from '@mui/material/';
+import {  TextField } from '@mui/material/';
 import './Login.css'
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Routes, Route } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import LoginService from '../services/LoginService';
-import UserHome from './UserHome';
 import axios from "axios"
 import EasyRentalAppBar from './EasyRentalAppBar';
 import { myStorage } from '../App';
-const USER_REST_API_URL = "http://169.234.8.65:8080"
+import  {USER_REST_API_URL} from '../App'
+//const USER_REST_API_URL = "http://169.234.8.65:8080"
 
 
 export default function Login() {
@@ -51,12 +49,13 @@ export default function Login() {
                     else {
                         settingError();
                     }
-                })
+               })
         }
     }
 
     return (
         <div>
+           
             <EasyRentalAppBar></EasyRentalAppBar>
             <Container>
                 <Paper elevation={2} className='login-paper' >
